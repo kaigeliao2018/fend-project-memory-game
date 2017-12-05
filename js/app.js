@@ -172,7 +172,7 @@ function timer()//计时
         second=0;
         minute=minute+1;
     }
-    document.querySelector('.time-text').value=minute+'minutes'+second+'seconds'+millisecond+'milliseconds';
+    document.querySelector('.time-text').value=minute+'m'+second+'s'+millisecond+'ms';
 }
 
 function stop()//停止
