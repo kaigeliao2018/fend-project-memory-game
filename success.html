@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>congratulations!</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="wrap">
+        <div><i class="fa fa-check-circle "></i></div>
+        <h2>Congratulations!You Won!</h2>
+        <div>with <b></b> Moves and <b></b> Stars</div>
+        <div>time：<b></b></div>
+        <div>Woooooo!</div>
+        <a href="index.html"><b>Play again!</b></a>
+    </div>
+    <script>
+        if (!window.DE) {
+            window.DE = {};
+        }
+        DE.UrlParams = {};
+        (function () {
+            var aParam;
+            var aParams = document.location.search.substr(1).split('&');
+            var text=document.querySelectorAll('b');
+            for (var i=0; i<aParams.length; i++){
+                aParam = aParams[i].split('=');
+                if (aParam[0].length > 0) {
+                    DE.UrlParams[aParam[0]] = decodeURI(aParam[1]);
+                    text[i].innerHTML=encodeURI(DE.UrlParams[aParam[0]]);
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
