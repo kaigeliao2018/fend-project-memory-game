@@ -18,9 +18,12 @@
         <a href="index.html"><b>Play again!</b></a>
     </div>
     <script>
+        <!--从地址栏获取的信息获取步数和星数及用时，这个思路请教他人-->
+        // 创建一个全局对象
         if (!window.DE) {
             window.DE = {};
         }
+        //全局对象的属性对象
         DE.UrlParams = {};
         (function () {
             var aParam;
