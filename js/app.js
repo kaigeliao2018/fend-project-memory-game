@@ -57,7 +57,7 @@ function open() {
     }
 }
 
-function match(openNumber) {
+function match() {
     var openNumber= document.querySelectorAll('li.open').length;
     if (openNumber == 2) {
         var opens= document.querySelectorAll('li.open');
