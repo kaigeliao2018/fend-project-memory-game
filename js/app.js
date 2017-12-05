@@ -116,7 +116,9 @@ function end() {
     var time=document.querySelector('.time-text').value;
     //全部匹配完毕后跳转到新页面
     if(lis.length==16){
+        //结束计时
         stop();
+        //游戏结束跳到新页面，同时将新页面需要的参数添加到地址栏，这个思路请教他人
         var url='success.html?steps='+steps+'&star='+star+'&time='+time;
         setTimeout(function () {
             window.location.href=url;
@@ -128,6 +130,7 @@ var ul = document.querySelector('ul.deck');
 var flag=true;
 ul.addEventListener('click',function () {
     event.stopPropagation();
+    //第一次点击触发start函数，以后都不执行，这个思路参考：https://segmentfault.com/q/1010000005994153?_ea=987715
     if(flag){
         flag=false;
         start();
@@ -148,7 +151,7 @@ refresh.addEventListener('click',function () {
     window.location.reload();
 },false);
 
-//计时器
+//计时器，这个思路参考:http://www.jb51.net/article/105783.htm
 var minute=0,second=0,millisecond=0;//分 秒
 var int;
 function start()//开始
