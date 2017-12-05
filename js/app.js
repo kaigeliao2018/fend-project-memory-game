@@ -58,7 +58,8 @@ function open() {
 }
 
 function match(openNumber) {
-    if (openNumber == 1) {
+    var openNumber= document.querySelectorAll('li.open').length;
+    if (openNumber == 2) {
         var opens= document.querySelectorAll('li.open');
         if (opens[0].firstElementChild.classList.toString() == opens[1].firstElementChild.classList.toString()) {
            for(var i=0;i<opens.length;i++){
